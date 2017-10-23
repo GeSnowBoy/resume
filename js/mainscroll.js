@@ -23,7 +23,7 @@
         myScroll.on('scroll', function() {
             var y = -myScroll.y;
             var page = ((y / H) >> 0);
-            var opacity = y < 0 ? 0 : (y % H) / H;
+            var opacity = y < 0.04 ? 0 : (y % H) / H;
             var scale = opacity / 2 + 1;
             elements[page].css({
                 'opacity': 1 - opacity,
